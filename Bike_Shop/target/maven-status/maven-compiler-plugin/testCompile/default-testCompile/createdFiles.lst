@@ -1,0 +1,5 @@
+model\AdminLoginTest.class
+model\OrderTest.class
+model\RegisterTest.class
+model\UserLoginTest.class
+model\ServicesTest.class
