@@ -18,11 +18,7 @@ public class OrderValidation {
 		{
 			System.out.println("Welcome");
 			OrderInsertion.insertOrder(order);
-		    
-		    
-		     
-			
-		}
+		 }
 		else
 		{
 			throw new Exception("Please Re-Enter Your Details");
@@ -35,8 +31,10 @@ public class OrderValidation {
 	}
 	public static int PhonenumberValidation(String phonenumber) throws Exception
 	{
-		int result=0;
+		
 		char[] mobile=phonenumber.toCharArray();
+	
+		@SuppressWarnings("unused")
 		int count=0;
 		if(mobile.length>10 || mobile.length<10)
 		{
@@ -57,29 +55,18 @@ public class OrderValidation {
 				count++;
 			}
 		}
-		if(count==11)
-		{
-			result=OrderValidationFromDatabase.phonenumberValidator(phonenumber);
-			if(result==1)
-			{
-				return 1;
-				
-			}
-			
-		}
-		else
-		{
-			throw new Exception("Please Enter a Valid Mobile Number");
-		}
-		return result;
+		return 1;
+	
 		
 	}
 	
 	
 	public static int AadharnumberValidation(String aadharnumber) throws Exception
 	{
-		int result=0;
+		
 		char[] aadhar=aadharnumber.toCharArray();
+		
+		@SuppressWarnings("unused")
 		int count=0;
 		if(aadhar.length>12 || aadhar.length<12)
 		{
@@ -100,21 +87,9 @@ public class OrderValidation {
 				count++;
 			}
 		}
-		if(count==13)
-		{
-			result=OrderValidationFromDatabase.aadharnumberValidator(aadharnumber);
-			if(result==1)
-			{
-				return 1;
-				
-			}
-			
-		}
-		else
-		{
-			throw new Exception("Please Enter a Valid Aadhar Number");
-		}
-		return result;
+		return 1;
+		
+		
 		
 	}
 	

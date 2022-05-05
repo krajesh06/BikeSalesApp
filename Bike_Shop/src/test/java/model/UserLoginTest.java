@@ -1,8 +1,6 @@
 package model;
 
 import java.util.Scanner;
-
-import validation.SelectingOption;
 import validation.UserLoginValidationFromDatabase;
 
 public class UserLoginTest {
@@ -10,8 +8,8 @@ public class UserLoginTest {
 
 	public static void main(String[] args) {
 
-		System.out.println("Enter a id:");
-		int id = sc.nextInt();
+		System.out.println("Enter a name:");
+		String name = sc.next();
 
 		System.out.println("Enter a mail id:");
 		String mail_id = sc.next();
@@ -20,10 +18,12 @@ public class UserLoginTest {
 		String password = sc.next();
 
 		try {
-			int logincheck = UserLoginValidationFromDatabase.validateUser(id, mail_id, password);
+			int logincheck = UserLoginValidationFromDatabase.validateUser(name, mail_id, password);
 			if(logincheck==1){
 				System.out.println("success");
-				SelectingOption.View();
+				ListOfBikesTest.view();
+				ListOfBikesTest.items();
+				ListOfBikesTest.items1();
 			}else {
 				throw new Exception("Enter a valid credentials");
 			}

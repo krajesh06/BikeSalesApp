@@ -2,12 +2,16 @@ package validation;
 
 import java.sql.Connection;
 
+
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import Util.ConnectionUtil;
 
 public class RegisterValidationFromDatabase {
+	
+
 	public static int emailValidator(String email) throws Exception
 	{
 		Connection connection ;
@@ -58,6 +62,8 @@ public class RegisterValidationFromDatabase {
 		   return 1;
 	   }
 	}
+	
+	
 
 
 }

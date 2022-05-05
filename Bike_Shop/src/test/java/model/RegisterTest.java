@@ -10,7 +10,7 @@ public class RegisterTest {
 	{
 		@SuppressWarnings("resource")
 		Scanner sc=new Scanner(System.in);
-
+         System.out.println("Kindly give the correct credentials! ");
 		System.out.println("Enter your Username");
 		String userName = sc.next();
 		System.out.println("Enter your Email");

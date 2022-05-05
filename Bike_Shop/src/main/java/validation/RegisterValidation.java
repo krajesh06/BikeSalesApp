@@ -12,9 +12,8 @@ public class RegisterValidation {
 		
 		if(isUserNameValid+isMobileValid+isEmailValid+isPasswordValid==4)
 		{
-			System.out.println("Order placed successfully");
-	 	    System.out.println("It takes upto 3 months.We will reach you once the bike reach us");
-	        System.out.println("Thank you for choosing us.");RegisterInsertion.insertUser(registration);
+			System.out.println("Registered  successfully");
+	 	    RegisterInsertion.insertUser(registration);
 		    Registration.setSessionMail(registration.getUserName());
 		    
 		     

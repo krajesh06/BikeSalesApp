@@ -2,6 +2,7 @@ package model;
 
 import java.util.Scanner;
 
+
 import validation.OrderValidation;
 
 public class OrderTest {
@@ -12,19 +13,21 @@ public class OrderTest {
 		Scanner sc=new Scanner(System.in);
 
 		System.out.println("Enter your name");
-		String Name = sc.next();
+		String Name = sc.nextLine();
 		System.out.println("Enter your phone number");
-		String Phonenumber=sc.next();
+		String Phonenumber=sc.nextLine();
 		System.out.println("Enter your Aadhar Number");
-		String Aadharnumber = sc.next();
+		String Aadharnumber = sc.nextLine();
 		System.out.println("Enter your Payment_method");
-		String Payment_method = sc.next();
+		String Payment_method = sc.nextLine();
 		System.out.println("Enter Bike name");
-		String Bikename=sc.next();
+		String Bikename=sc.nextLine();
 		System.out.println("Enter Bike color");
-		String Color=sc.next();
+		String Color=sc.nextLine();
 		System.out.println("Enter Bike model");
-		String Model=sc.next();
+		String Model=sc.nextLine();
+		
+		
 		Orders order=new Orders();
 		order.setName(Name);
 		order.setPhonenumber(Phonenumber);
@@ -33,6 +36,7 @@ public class OrderTest {
 		order.setBikename(Bikename);
 		order.setColor(Color);
 		order.setModel(Model);
+		
 		try
 		{
 		OrderValidation.validatingOrders(order);

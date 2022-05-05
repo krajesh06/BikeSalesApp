@@ -2,7 +2,8 @@ package model;
 
 import java.util.Scanner;
 
-import validation.AdminLoginValidateFromDataBase;
+
+import Admin.AdminLoginValidateFromDatabase;
 
 public class AdminLoginTest {
 	static Scanner sc = new Scanner(System.in);
@@ -19,8 +20,8 @@ public class AdminLoginTest {
 		String password = sc.next();
 
 		try {
-			@SuppressWarnings("unused")
-			int logincheck = AdminLoginValidateFromDataBase.validateAdmin(id, mail_id, password);
+			
+			int logincheck = AdminLoginValidateFromDatabase.validateAdmin(id, mail_id, password);
 			if(logincheck==1){
 				System.out.println("success");
 			}else {

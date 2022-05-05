@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import Util.ConnectionUtil;
 
 public class ServiceValidationFromDatabase {
+	
+	
 
 	public static int phonenumberValidator(String phone) throws Exception
 	{

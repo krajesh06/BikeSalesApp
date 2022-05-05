@@ -1,4 +1,4 @@
-package validation;
+package Admin;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,9 +6,9 @@ import java.sql.ResultSet;
 
 import Util.ConnectionUtil;
 
-public class UserLoginValidationFromDatabase {
+public class AdminLoginValidateFromDatabase {
 
-	public static int validateUser(String name, String mail_id, String password) throws Exception {
+	public static int validateAdmin(int id, String mail_id, String password) throws Exception {
 
 		Connection connection;
 		PreparedStatement statement;
@@ -16,11 +16,11 @@ public class UserLoginValidationFromDatabase {
 
 		connection = ConnectionUtil.databaseConnection();
 
-		String query = "select  name,mail_id,password from  Register where name=? and  mail_id =? and password =?";
+		String query = "select  id,mail_id,password from  shop_admin where mail_id =? and  id =? and password =?";
 		statement = connection.prepareStatement(query);
 
-		statement.setString(1, name);
-		statement.setString(2, mail_id);
+		statement.setString(1, mail_id);
+		statement.setInt(2, id);
 		statement.setString(3, password);
 		
 

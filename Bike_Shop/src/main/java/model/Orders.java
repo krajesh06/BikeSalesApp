@@ -51,6 +51,12 @@ public class Orders {
 	public void setModel(String model) {
 		this.model = model;
 	}
+	@Override
+	public String toString() {
+		return "Orders [name=" + name + ", phonenumber=" + phonenumber + ", aadharnumber=" + aadharnumber
+				+ ", payment_method=" + payment_method + ", bikename=" + bikename + ", color=" + color + ", model="
+				+ model + "]";
+	}
 	
 	
 	

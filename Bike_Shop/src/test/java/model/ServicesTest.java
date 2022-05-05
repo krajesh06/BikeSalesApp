@@ -12,9 +12,9 @@ public class ServicesTest {
 		Scanner sc=new Scanner(System.in);
 
 		System.out.println("Enter your name");
-		String Name = sc.next();
+		String Name = sc.nextLine();
 		System.out.println("Enter your phone number");
-		String Phonenumber=sc.next();
+		String Phonenumber=sc.nextLine();
 		System.out.println("Enter your Queries");
 		String Queries = sc.nextLine();
 		System.out.println("Enter your Complaints");
